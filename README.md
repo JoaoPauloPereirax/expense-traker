@@ -1,4 +1,4 @@
-# CONTROLE DE DESPESAR
+# CONTROLE DE DESPESAS
 
 ### Iniciando o projeto com react e typescript
 ```
