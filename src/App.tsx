@@ -15,7 +15,7 @@ import {items} from './data/items';
 import {useState,useEffect} from 'react';
 
 //Importando funções
-import {getCurrentMonth} from './helpers/dateFilter';
+import {getCurrentMonth, filterListByMonth} from './helpers/dateFilter';
 
 const App = () => {
 
@@ -27,6 +27,7 @@ const App = () => {
 
 
   useEffect(()=>{
+    setFilteredList(filterListByMonth(list, currentMonth));
 
   },[list,currentMonth])
   
