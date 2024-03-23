@@ -17,6 +17,10 @@ import {useState,useEffect} from 'react';
 //Importando funções
 import {getCurrentMonth, filterListByMonth} from './helpers/dateFilter';
 
+//Componentes da página
+import {TableArea} from './components/TableArea'
+
+
 const App = () => {
 
   const [list,setList] = useState(items);
@@ -44,6 +48,8 @@ const App = () => {
           {/*Área de inserções */}
           
           {/*Tabela de itens*/}
+          <TableArea/>
+
       </C.Body>
     </C.Container>
   );
