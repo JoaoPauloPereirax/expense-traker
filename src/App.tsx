@@ -11,7 +11,8 @@ import {categories} from './data/categories';
 import {items} from './data/items';
 
 //Para manipular os dados (useState)
-import {useState} from 'react';
+//Para monitorar dados (useEffect)
+import {useState,useEffect} from 'react';
 
 //Importando funções
 import {getCurrentMonth} from './helpers/dateFilter';
@@ -21,8 +22,14 @@ const App = () => {
   const [list,setList] = useState(items);
   //Aqui ainda poderiamos adicionar o type
   //const [list,setList] = useState<Item[]>(items);
+  const [filteredList,setFilteredList]= useState<Item[]>();
   const [currentMonth,setCurrentMonth] = useState(getCurrentMonth());
 
+
+  useEffect(()=>{
+
+  },[list,currentMonth])
+  
   return (
     <C.Container>{/* C.AlgumaCoisa é usado como se fosse uma classe. É uma classe que está sendo configurada em App.styles*/}
       <C.Header>{/* É uma classe que está sendo configurada em App.styles*/}
